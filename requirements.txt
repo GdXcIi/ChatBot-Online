@@ -1,0 +1,4 @@
+json
+requests
+openai==1.42.0
+streamlit
