@@ -1,7 +1,16 @@
+import os
+import subprocess as sp
+
+# Installation forcée des dépendances
+try:
+    sp.run(["pip", "install", "-r", "requirements.txt"], check=True)
+except Exception as e:
+    print(f"Erreur lors de l'installation des dépndances : {e}")
+
+from openai import OpenAI
 import streamlit as st
 import requests as rq
 import json
-from openai import OpenAI
 
 st.title("Bienvenue sur ChatBot Online !")
 st.write("Entrez simplement votre clé API et vous pouvez commencer à discuter (en précisant évidemment s'il s'agit de MistralAI ou OpenAI) !")
