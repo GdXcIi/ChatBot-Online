@@ -1,12 +1,3 @@
-import os
-import subprocess as sp
-
-# Installation forcée des dépendances
-try:
-    sp.run(["pip", "install", "-r", "requirements.txt"], check=True)
-except Exception as e:
-    print(f"Erreur lors de l'installation des dépndances : {e}")
-
 from openai import OpenAI
 import streamlit as st
 import requests as rq
